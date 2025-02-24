@@ -1,0 +1,12 @@
+<h1>********* Welcome to the longest word-game! *********</h1>
+Here is your grid:
+<p><% @list.each do |letter|%>
+    <%= "#{letter.upcase}   "%>
+  <%end%>
+  </p>
+<h1>*****************************************************</h1>
+
+<form action="/check" data-turbo="false" method="get">
+  <input name="word" type="text" placeholder="Type your word">
+  <input type="submit">
+  </form>
